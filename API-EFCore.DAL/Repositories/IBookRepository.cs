@@ -10,5 +10,6 @@ namespace API_EFCore.DAL.Repositories
     public interface IBookRepository
     {
         Task<IEnumerable<BookEntity>> GetBooksAsync();
+        Task<BookEntity> GetBookByIdAsync(int id);
     }
 }

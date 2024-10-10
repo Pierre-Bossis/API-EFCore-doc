@@ -17,6 +17,12 @@ namespace API_EFCore.BLL.Services
         {
             _repository = repository;
         }
+
+        public async Task<BookEntity> GetBookByIdAsync(int id)
+        {
+            return await _repository.GetBookByIdAsync(id);
+        }
+
         public async Task<IEnumerable<BookEntity>> GetBooksAsync()
         {
             return await _repository.GetBooksAsync();

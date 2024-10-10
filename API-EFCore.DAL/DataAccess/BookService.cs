@@ -17,6 +17,12 @@ namespace API_EFCore.DAL.DataAccess
         {
             _context = context;
         }
+
+        public async Task<BookEntity> GetBookByIdAsync(int id)
+        {
+            return await _context.Books.SingleOrDefaultAsync(b => b.Id == id);
+        }
+
         public async Task<IEnumerable<BookEntity>> GetBooksAsync()
         {
             return await _context.Books.ToListAsync();

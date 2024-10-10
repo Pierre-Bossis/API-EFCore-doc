@@ -26,5 +26,17 @@ namespace API_EFCore.Controllers
 
             return Ok(bookDtos);
         }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var book = await _repo.GetBookByIdAsync(id);
+
+            if(book is null)
+                return NotFound("Erreur lors de la récupération du livre");
+
+            var bookDto = book.ToDto();
+            return Ok(bookDto);
+        }
     }
 }

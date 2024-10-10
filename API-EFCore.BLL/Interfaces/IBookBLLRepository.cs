@@ -10,5 +10,6 @@ namespace API_EFCore.BLL.Interfaces
     public interface IBookBLLRepository
     {
         Task<IEnumerable<BookEntity>> GetBooksAsync();
+        Task<BookEntity> GetBookByIdAsync(int id);
     }
 }
