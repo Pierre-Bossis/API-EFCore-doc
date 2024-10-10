@@ -1,5 +1,5 @@
 ﻿using API_EFCore.DAL.Entities;
-using API_EFCore.Models;
+using API_EFCore.Models.Book;
 
 namespace API_EFCore.Tools.Mappers
 {

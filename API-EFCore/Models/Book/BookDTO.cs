@@ -1,4 +1,4 @@
-﻿namespace API_EFCore.Models
+﻿namespace API_EFCore.Models.Book
 {
     public record BookDTO
     {
