@@ -12,7 +12,7 @@ Projet de base qui référence l'utilisation d'EntityFrameworkCore dans une stru
 
 ## Fonctionnalités
 
-- mettre en place l'architecture
+- mettre en place l'architecture trois tier
 - mettre en place EntityFrameworkCore
 - Fonctionnalité 3
 
