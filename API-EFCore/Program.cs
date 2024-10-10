@@ -13,9 +13,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// préciser project pour commandes migrations : 
-// - dotnet ef migrations add InitialCreate --startup-project API-EFCore --project API-EFCore.DAL --output-dir migrations
-// - dotnet ef database update --startup-project API-EFCore --project API-EFCore.DAL
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
