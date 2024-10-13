@@ -1,6 +1,8 @@
 # API-EFCore documentation
 
-Projet de base qui référence l'utilisation d'EntityFrameworkCore dans une application de type API web ASP.NET Core, structure trois couche API-BLL-DAL
+Projet de base qui référence l'utilisation d'EntityFrameworkCore dans une application de type API web ASP.NET Core, structure trois couche API-BLL-DAL.
+
+L'avantage de cette architecture est que les couches sont séparées et modulaires, ainsi, si nous décidons de remplacer EFCore par ADO .NET ou Dapper, cela est bien plus facilement interchangeable, vu que nous ne devrions modifier que la DAL.
 
 ## Installation
 
@@ -118,7 +120,11 @@ Projet de base qui référence l'utilisation d'EntityFrameworkCore dans une appl
 4. ...
 5. ...
 
-### 3. Controlleurs et première consomation d'endpoint
+### 3. Controlleurs
+
+1. Pour ajouter un controlleur, aller dans le projet API, clic droit sur le dossier Controllers, Ajouter -> Contrôleur -> API -> Contrôleur d'API vide
+2. Tous les endpoints lié aux livres se trouveront ici, chaque requête reçue empruntera le chemin suivant: Controlleur(API) -> BLL -> DAL et DAL -> BLL -> Controlleur(API) pour ramener les data
+3. Ne pas oublier de créer les mappers pour les entités, le Controlleur s'occupe de la transformation Entité -> DTO et inversément.
 
 ## Contact
 
